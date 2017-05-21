@@ -1,4 +1,4 @@
-from __future__ import unicode_literals
+
 
 import weakref
 
@@ -74,7 +74,7 @@ class Division(object):
         # sorts from latest to oldest, and ``None`` means latest
         key = int(code)
         pairs = sorted(
-            data.items(), reverse=True,
+            list(data.items()), reverse=True,
             key=lambda pair: make_year_key(pair[0]))
         for year, store in pairs:
             if key in store:

@@ -4,7 +4,7 @@
 A script to generate the data module.
 """
 
-from __future__ import print_function, unicode_literals
+
 
 import os
 import sys
@@ -46,7 +46,7 @@ def main():
     with open(destination, 'w') as destination_file:
         print(result, file=destination_file)
 
-    for current_dict in data.values():
+    for current_dict in list(data.values()):
         message = '{0} records has been generated.'.format(len(current_dict))
         print(message, file=sys.stderr)
 

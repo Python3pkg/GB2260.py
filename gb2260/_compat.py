@@ -20,6 +20,6 @@ def unicode_compatible(cls):
 
 
 if PY2:  # pragma: no cover
-    unicode_type = unicode
+    unicode_type = str
 else:  # pragma: no cover
     unicode_type = str
